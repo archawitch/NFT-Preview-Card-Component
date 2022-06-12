@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      margin: 0;
+      cursor: default;
+      background-color: hsl(217, 54%, 11%);
+      color: hsl(215, 51%, 70%);
+      font-family: 'Outfit';
+      font-size: 300;
+    }
+
+    .card-container {
+      background: hsl(216, 50%, 16%);
+      border-radius: 15px;
+      width: 275px;
+      height: auto;
+      padding: 25px 25px 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .image-container {
+      background-image: url(images/image-equilibrium.jpg);
+      background-size: 100%;
+      height: 275px;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      z-index: -1;
+    }
+
+    .image-container:hover {
+      cursor: pointer;
+    }
+
+    .view-icon {
+      opacity: 0%;
+      width: 15%;
+      margin: auto;
+    }
+
+    .image-container:hover .view-icon {
+      opacity: 100%;
+    }
+
+    .image-container:hover .background-hover {
+      width:100%;
+      height:100%;
+      border-radius: 10px;
+      opacity: 70%;
+      position: absolute;
+      z-index: -10;
+      background: hsl(178, 100%, 50%);
+    }
+
+    .equilibrium-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 25px;
+    }
+
+    .equilibrium-name:hover {
+      cursor: pointer;
+      color: hsl(178, 100%, 50%);
+    }
+
+    .equilibrium-description {
+      padding: 3px 0;
+      font-size: 1rem;
+    }
+
+    .status {
+      margin-top: 25px;
+      position: relative;
+      height: 2.3rem;
+    }
+
+    .ethereum {
+      position: absolute;
+      display: flex;
+    }
+
+    .ethereum span {
+      padding-left: 7px;
+      color: hsl(178, 100%, 50%);
+      font-size: 400;
+    }
+
+    .time {
+      position: absolute;
+      display: flex;
+      right: 0;
+    }
+
+    .time span {
+      margin-left: 7px;
+    }
+
+    hr {
+      color: hsl(216, 50%, 16%);
+      height: 1px;
+      background-color: hsl(215, 32%, 27%);
+      border: none;
+    }
+
+    .creator {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .creator img {
+      width: 30px;
+      border: solid #fff;
+      border-radius: 100%;
+      float: left;
+    }
+
+    .creator p {
+      margin: auto 16px;
+    }
+
+    .creator span {
+      color: #fff;
+    }
+
+    .creator span:hover {
+      cursor: pointer;
+      color: hsl(178, 100%, 50%);
+    }
+
+    .attribution {
+      margin-top: 10px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-container">
+    <div class="image-container">
+      <img class="view-icon" src="images/icon-view.svg" alt="icon-view.svg">
+      <div class="background-hover">
+
+      </div>
+      <!-- <img src="images/image-equilibrium.jpg" alt="image-equilibrium.jpg"> -->
+    </div>
+    <h1 class="equilibrium-name">Equilibrium #3429</h1>
+    <p class="equilibrium-description">Our Equilibrium collection promotes balance and calm.</p>
+    <div class="status">
+      <div class="ethereum">
+        <img class="icon-ethereum" src="images/icon-ethereum.svg" alt="icon-ethereum.svg"><span>0.041 ETH</span>
+      </div>
+      <div class="time">
+        <img class="icon-clock" src="images/icon-clock.svg" alt="icon-clock.svg"><span class="time-text">3 days left</span>
+      </div>
+    </div>
+    <hr>
+    <div class="creator">
+      <img class="image-avatar" src="images/image-avatar.png" alt="image-avatar.png">
+      <p>Creation of <span class="creator-name">Jules Wyvern</span></p>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/archawitch">archawitch</a>.
+  </div>
+</body>
+
+</html>
